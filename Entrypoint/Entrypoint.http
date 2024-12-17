@@ -1,0 +1,6 @@
+@Entrypoint_HostAddress = http://localhost:5126
+
+GET {{Entrypoint_HostAddress}}/virexion/
+Accept: application/json
+
+###
