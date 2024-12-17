@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Services.CommandHandler;
 
 
-namespace Entrypoint.Controllers
+namespace Entrypoint.Controller
 {
     [ApiController]
     [Route("[controller]")]
