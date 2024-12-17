@@ -1,8 +1,6 @@
-﻿
-
-namespace Services
+﻿namespace Services.HelloWorld
 {
-    public class HelloWorldService
+    public class HelloWorldService : IHelloWorldService
     {
         public void Hello()
         {
