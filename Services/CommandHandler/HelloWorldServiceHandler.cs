@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Services.CommandHandler
 {
-    public class HelloWorldServiceHandler(IHelloWorldService helloWorldService) : AbstractCommandHandler<HelloWorldCmd>
+    public class HelloWorldServiceHandler(IHelloWorldService helloWorldService) : ICommandHandler<HelloWorldCmd>
     {
         private readonly IHelloWorldService _helloWorldService = helloWorldService;
 
-        public override void HandleCommand(HelloWorldCmd cmd)
+        public void HandleCommand(HelloWorldCmd cmd)
         {
             _helloWorldService.Hello();
         }

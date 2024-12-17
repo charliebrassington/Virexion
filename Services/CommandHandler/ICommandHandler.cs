@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Services.CommandHandler
 {
-    public abstract class AbstractCommandHandler<T> where T : BaseCommand
+    public interface ICommandHandler<T> where T : BaseCommand
     {
-        public abstract void HandleCommand(T cmd);
+        public void HandleCommand(T cmd);
     }
 }
