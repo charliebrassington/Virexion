@@ -14,5 +14,6 @@ namespace Domain.Models.CategoryStatistics
         public required JobStatistics TeachersStatistics {  get; set; }
         public required List<SkillsEntity> SkillsTaught { get; set; }
         public required bool IsFree { get; set; }
+        public required int Budget { get; set; }
     }
 }

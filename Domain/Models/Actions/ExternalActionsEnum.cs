@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.HelloWorld
+namespace Domain.Models.Actions
 {
-    public interface IHelloWorldService
+    public enum ExternalActionsEnum
     {
-        public void Hello();
+        ChangeTaxBracket = 0,
     }
 }
