@@ -1,0 +1,18 @@
+{
+    "EducationStatistics": {
+        "TeachersStatistics": {
+            "Salary": 0.00,
+            "Workload": 0,
+            "SkillsRequired": [],
+            "Quality": 0,
+            "Supply": 0,
+            "Demand": 0
+        },
+        "SkillsTaught": [],
+        "IsFree": true,
+        "Budget": 0
+    },
+    "TaxStatistics": {
+        "TaxBracket": {}
+    }
+}
