@@ -1,0 +1,7 @@
+[
+    {
+        "ParentActionName": "ChangeTaxBracket",
+        "ChildActionName": "ChangeEducationBudget",
+        "Weight": 0.10
+    }
+]

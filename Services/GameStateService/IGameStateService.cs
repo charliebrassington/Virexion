@@ -10,5 +10,6 @@ namespace Services.GameStateService
     public interface IGameStateService
     {
         GameState GetGameState();
+        public void SaveCurrentGameState(GameState gameState);
     }
 }

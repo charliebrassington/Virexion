@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Adapters.GameFileAdapter
+namespace Domain.Models.Actions
 {
-    public interface IGameFileAdapter
+    public interface IActionArgument
     {
-        string FetchGameState();
     }
 }

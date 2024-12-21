@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Domain.Commands;
+using Domain.Models;
+using Domain.Models.Actions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +11,7 @@ namespace Services.ActionHandler
 {
     public interface IActionHandler
     {
-        void Handle(List<string> arguments);
+        string ActionName { get; }
+        public List<CompleteActionCmd> Handle(GameState gameState, List<string> arguments);
     }
 }
