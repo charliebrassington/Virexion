@@ -8,7 +8,6 @@ namespace Domain.Models.Actions.InternalActionArguments
 {
     public class ChangeEducationBudgetArgument : BaseInternalActionArgument
     {
-        public required float TaxPercentageChange { get; set; }
-        public required float SalaryBracket {  get; set; }
+        public required float GovernmentBudget {  get; set; }
     }
 }

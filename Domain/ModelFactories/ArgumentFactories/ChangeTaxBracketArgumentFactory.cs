@@ -14,7 +14,7 @@ namespace Domain.ModelFactories.ArgumentFactories
             return new()
             {
                 Salary = Convert.ToInt32(arguments[0]),
-                TaxPercentage = float.Parse(arguments[1])
+                TaxPercentage = float.Parse(arguments[1]),
             };
         }
     }

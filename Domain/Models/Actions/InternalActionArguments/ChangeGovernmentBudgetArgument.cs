@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Models.CategoryStatistics
+namespace Domain.Models.Actions.InternalActionArguments
 {
-    public interface ICategoryStatistics
+    public class ChangeGovernmentBudgetArgument : IActionArgument
     {
     }
 }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Models.CategoryStatistics
+namespace Domain.Models.EntityModels
 {
-    public class TaxStatistics : ICategoryStatistics
+    public class Government : IEntityModel
     {
         public required Dictionary<int, float> TaxBracket {  get; set; }
+        public required float OverallBudget { get; set; }
     }
 }

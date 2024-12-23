@@ -1,6 +1,11 @@
 [
     {
         "ParentActionName": "ChangeTaxBracket",
+        "ChildActionName": "ChangeGovernmentBudget",
+        "Weight": 0.00
+    },
+    {
+        "ParentActionName": "ChangeGovernmentBudget",
         "ChildActionName": "ChangeEducationBudget",
         "Weight": 0.10
     }

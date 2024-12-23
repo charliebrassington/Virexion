@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Models.EntityStatistics
+namespace Domain.Models
 {
-    public interface IEntityStatistics
+    public interface IEntityModel
     {
     }
 }

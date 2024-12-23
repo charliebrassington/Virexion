@@ -25,11 +25,9 @@ namespace Services.ActionHandler.Handlers
 
         public override List<CompleteActionCmd> HandleAction(GameState gameState, ChangeTaxBracketArgument arguments)
         {
-            float change = _taxCategoryService.GetTaxPercentageChange(gameState.TaxStatistics, arguments.Salary, arguments.TaxPercentage);
+            gameState.Government.TaxBracket[arguments.Salary] = arguments.TaxPercentage;
 
-            gameState.TaxStatistics.TaxBracket[arguments.Salary] = arguments.TaxPercentage;
-
-            return GetConnectionActionList([change.ToString(), arguments.Salary.ToString()]);
+            return GetConnectionActionList([]);
         }
     }
 }

@@ -13,9 +13,8 @@ namespace Domain.ModelFactories.ArgumentFactories
         {
             return new()
             {
-                TaxPercentageChange = float.Parse(arguments[0]),
-                SalaryBracket = Convert.ToInt32(arguments[1]),
-                Weight = float.Parse(arguments[2])
+                GovernmentBudget = float.Parse(arguments[0]),
+                Weight = float.Parse(arguments[1])
             };
         }
     }

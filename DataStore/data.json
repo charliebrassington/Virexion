@@ -1,18 +1,45 @@
 {
-    "EducationStatistics": {
-        "TeachersStatistics": {
-            "Salary": 0.00,
-            "Workload": 0,
-            "SkillsRequired": [],
-            "Quality": 0,
-            "Supply": 0,
-            "Demand": 0
-        },
-        "SkillsTaught": [],
-        "IsFree": true,
-        "Budget": 0
+  "Government": {
+    "TaxBracket": {
+      "30000": 0.3,
+      "20000": 0.2,
+      "0": 0.0
     },
-    "TaxStatistics": {
-        "TaxBracket": {}
+    "OverallBudget": 4000.0
+  },
+  "Education": {
+    "SkillsTaught": [
+      "1",
+      "2"
+    ],
+    "TeacherJob": "1",
+    "Budget": 400.0
+  },
+  "People": {
+    "1": {
+      "Name": "jim",
+      "Age": 30,
+      "SkillsList": null,
+      "JobList": [
+        "1"
+      ]
     }
+  },
+  "Jobs": {
+    "1": {
+      "Salary": 20000.0,
+      "Workload": 0.1,
+      "SkillsRequired": [
+        "1"
+      ]
+    }
+  },
+  "Skills": {
+    "1": {
+      "SkillName": "Teaching"
+    },
+    "2": {
+      "SkillName": "English"
+    }
+  }
 }

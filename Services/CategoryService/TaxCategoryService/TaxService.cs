@@ -1,4 +1,5 @@
 ﻿using Domain.Models.CategoryStatistics;
+using Domain.Models.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,14 @@ namespace Services.CategoryService.TaxCategoryService
 {
     public class TaxService : ITaxCategoryService
     {
-        public float GetTaxPercentageChange(TaxStatistics taxStatistics, int salary, float percentage)
+        public float GetTaxPercentageChange(Government government, int salary, float percentage)
         {
-            return percentage - taxStatistics.TaxBracket.GetValueOrDefault(salary, 0);
+            return percentage - government.TaxBracket.GetValueOrDefault(salary, 0);
+        }
+
+        public float GetTaxPercentagePay(Government government, int salary)
+        {
+            return government.TaxBracket.MaxBy(pair => salary >= pair.Key).Value;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Services.ActionHandler.Handlers
 
         public override List<CompleteActionCmd> HandleAction(GameState gameState, ChangeEducationBudgetArgument arguments)
         {
-            Console.WriteLine("Handling change education budget");
+            gameState.Education.Budget = arguments.GovernmentBudget * arguments.Weight;
             return [];
         }
     }

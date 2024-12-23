@@ -1,4 +1,5 @@
 ﻿using Domain.Models.CategoryStatistics;
+using Domain.Models.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Services.CategoryService.TaxCategoryService
 {
-    public interface ITaxCategoryService
+    public interface ITaxCategoryService : ICategoryService
     {
-        public float GetTaxPercentageChange(TaxStatistics taxStatistics, int salary, float percentage);
+        public float GetTaxPercentageChange(Government government, int salary, float percentage);
+        public float GetTaxPercentagePay(Government government, int salary);
     }
 }
