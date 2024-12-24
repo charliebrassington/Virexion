@@ -11,10 +11,8 @@ using System.Threading.Tasks;
 
 namespace Services.ActionRunnerService
 {
-    public class ChainActionRunnerService(IConnectionManagerService connectionManagerService, IEnumerable<IActionHandler> actionHandlers) : IActionRunnerService
+    public class ChainActionRunnerService(IEnumerable<IActionHandler> actionHandlers) : IActionRunnerService
     {
-        private readonly IConnectionManagerService _connectionManagerService = connectionManagerService;
-
         private readonly Dictionary<string, IActionHandler> _actionHandlers = actionHandlers.ToDictionary(
             actionHandler => actionHandler.ActionName,
             actionHandler => actionHandler

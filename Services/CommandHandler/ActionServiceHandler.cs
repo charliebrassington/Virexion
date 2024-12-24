@@ -21,8 +21,6 @@ namespace Services.CommandHandler
 
         public void HandleCommand(CompleteActionCmd cmd)
         {
-            Console.WriteLine($"Got action to complete {cmd.ActionName}");
-
             GameState gameState = _gameStateService.GetGameState();
 
             _actionRunnerService.StartRunner(cmd, gameState);

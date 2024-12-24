@@ -1,5 +1,4 @@
-﻿using Domain.Models.CategoryStatistics;
-using Domain.Models.EntityModels;
+﻿using Domain.Models.EntityModels;
 using Domain.Models.SupportingEntityModels;
 using System;
 using System.Collections.Generic;

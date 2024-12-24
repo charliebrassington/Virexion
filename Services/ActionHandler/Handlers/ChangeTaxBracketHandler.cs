@@ -14,14 +14,12 @@ using System.Threading.Tasks;
 namespace Services.ActionHandler.Handlers
 {
     public class ChangeTaxBracketHandler(
-        ITaxCategoryService taxCategoryService,
         IArgumentFactory<ChangeTaxBracketArgument> factory,
         IConnectionManagerService connectionManagerService
     ) : AbstractActionHandler<ChangeTaxBracketArgument>(factory, connectionManagerService)
     {
         public override string ActionName => "ChangeTaxBracket";
 
-        private readonly ITaxCategoryService _taxCategoryService = taxCategoryService;
 
         public override List<CompleteActionCmd> HandleAction(GameState gameState, ChangeTaxBracketArgument arguments)
         {

@@ -2,10 +2,10 @@
   "Government": {
     "TaxBracket": {
       "30000": 0.3,
-      "20000": 0.2,
+      "20000": 0.3,
       "0": 0.0
     },
-    "OverallBudget": 4000.0
+    "OverallBudget": 36000.0
   },
   "Education": {
     "SkillsTaught": [
@@ -13,15 +13,27 @@
       "2"
     ],
     "TeacherJob": "1",
-    "Budget": 400.0
+    "Budget": 3600.0
   },
   "People": {
     "1": {
       "Name": "jim",
       "Age": 30,
-      "SkillsList": null,
+      "SkillsList": [
+        "1"
+      ],
       "JobList": [
         "1"
+      ]
+    },
+    "2": {
+      "Name": "bob",
+      "Age": 45,
+      "SkillsList": [
+        "3"
+      ],
+      "JobList": [
+        "2"
       ]
     }
   },
@@ -32,6 +44,13 @@
       "SkillsRequired": [
         "1"
       ]
+    },
+    "2": {
+      "Salary": 100000.0,
+      "Workload": 0.1,
+      "SkillsRequired": [
+        "3"
+      ]
     }
   },
   "Skills": {
@@ -40,6 +59,9 @@
     },
     "2": {
       "SkillName": "English"
+    },
+    "3": {
+      "SkillName": "Programming"
     }
   }
 }
