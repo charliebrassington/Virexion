@@ -2,6 +2,7 @@
 using Domain.Models;
 using Services.ActionConnectionService;
 using Services.ManagerService.WeightConnectionManagerService;
+using Services.ManagerService.WeightValidationManagerService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,14 @@ using System.Threading.Tasks;
 namespace Services.CommandHandler
 {
     public class ChangeConnectionWeightHandler(
-        IActionConnectionService actionConnectionService, IWeightConnectionManagerService weightManagerService
+        IActionConnectionService actionConnectionService, 
+        IWeightConnectionManagerService weightManagerService,
+        IWeightValidationManagerService weightValidationManager
     ) : ICommandHandler<ChangeConnectionWeight>
     {
         private readonly IActionConnectionService _actionConnectionService = actionConnectionService;
         private readonly IWeightConnectionManagerService _weightManagerService = weightManagerService;
+        private readonly IWeightValidationManagerService _weightValidationManager = weightValidationManager;
 
         public void HandleCommand(ChangeConnectionWeight cmd)
         {
@@ -23,7 +27,10 @@ namespace Services.CommandHandler
 
             _weightManagerService.ChangeConnectionWeights(connectionList, cmd);
 
-            _actionConnectionService.SaveActionConnections(connectionList);
+            if (_weightValidationManager.IsValidWeight(connectionList, cmd)) 
+            {
+                _actionConnectionService.SaveActionConnections(connectionList);
+            }
         }
     }
 }

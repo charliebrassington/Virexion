@@ -15,6 +15,7 @@ using Services.GameStateService;
 using Services.ManagerService.ActionConnectionManagerService;
 using Services.ManagerService.CategoryManagerService.PeopleCategoryManager;
 using Services.ManagerService.WeightConnectionManagerService;
+using Services.ManagerService.WeightValidationManagerService;
 using Services.ViewHandler.ActionViewer;
 using Services.ViewHandler.ConnectionViewer;
 
@@ -44,6 +45,7 @@ builder.Services.AddSingleton<IPeopleCategoryService, PeopleService>();
 builder.Services.AddSingleton<IPeopleCategoryManager, PeopleManager>();
 builder.Services.AddSingleton<IConnectionManagerService, ConnectionManagerService>();
 builder.Services.AddSingleton<IWeightConnectionManagerService, WeightConnectionManager>();
+builder.Services.AddSingleton<IWeightValidationManagerService, WeightValidationManager>();
 
 builder.Services.AddSingleton<IActionHandler, ChangeTaxBracketHandler>();
 builder.Services.AddSingleton<IActionHandler, ChangeEducationBudgetHandler>();

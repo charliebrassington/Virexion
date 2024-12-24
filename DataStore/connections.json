@@ -1,12 +1,12 @@
 [
-    {
-        "ParentActionName": "ChangeTaxBracket",
-        "ChildActionName": "ChangeGovernmentBudget",
-        "Weight": 0.00
-    },
-    {
-        "ParentActionName": "ChangeGovernmentBudget",
-        "ChildActionName": "ChangeEducationBudget",
-        "Weight": 0.10
-    }
+  {
+    "ParentActionName": "ChangeTaxBracket",
+    "ChildActionName": "ChangeGovernmentBudget",
+    "Weight": 0.0
+  },
+  {
+    "ParentActionName": "ChangeGovernmentBudget",
+    "ChildActionName": "ChangeEducationBudget",
+    "Weight": 1.0
+  }
 ]
