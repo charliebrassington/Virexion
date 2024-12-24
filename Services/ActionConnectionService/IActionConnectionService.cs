@@ -10,5 +10,6 @@ namespace Services.ActionConnectionService
     public interface IActionConnectionService
     {
         public List<RelationshipConnection> GetActionConnections();
+        public void SaveActionConnections(List<RelationshipConnection> connections);
     }
 }

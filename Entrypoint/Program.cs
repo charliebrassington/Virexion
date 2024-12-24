@@ -14,6 +14,7 @@ using Services.CommandHandler;
 using Services.GameStateService;
 using Services.ManagerService.ActionConnectionManagerService;
 using Services.ManagerService.CategoryManagerService.PeopleCategoryManager;
+using Services.ManagerService.WeightConnectionManagerService;
 using Services.ViewHandler.ActionViewer;
 using Services.ViewHandler.ConnectionViewer;
 
@@ -26,11 +27,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ICommandHandler<CompleteActionCmd>, ActionServiceHandler>();
+builder.Services.AddScoped<ICommandHandler<ChangeConnectionWeight>, ChangeConnectionWeightHandler>();
+
 builder.Services.AddSingleton<IExternalAction, ChangeTaxBracketAction>();
 builder.Services.AddSingleton<IGameStateService, StateService>();
 builder.Services.AddSingleton<IActionRunnerService, ChainActionRunnerService>();
 builder.Services.AddSingleton<IJsonFileAdapter, JsonAdapter>();
-builder.Services.AddSingleton<IConnectionManagerService, ConnectionManagerService>();
 builder.Services.AddSingleton<IActionConnectionService, ConnectionService>();
 
 builder.Services.AddSingleton<IExternalActionViewer, ExternalActionViewer>();
@@ -40,6 +42,8 @@ builder.Services.AddSingleton<ITaxCategoryService, TaxService>();
 builder.Services.AddSingleton<IPeopleCategoryService, PeopleService>();
 
 builder.Services.AddSingleton<IPeopleCategoryManager, PeopleManager>();
+builder.Services.AddSingleton<IConnectionManagerService, ConnectionManagerService>();
+builder.Services.AddSingleton<IWeightConnectionManagerService, WeightConnectionManager>();
 
 builder.Services.AddSingleton<IActionHandler, ChangeTaxBracketHandler>();
 builder.Services.AddSingleton<IActionHandler, ChangeEducationBudgetHandler>();
