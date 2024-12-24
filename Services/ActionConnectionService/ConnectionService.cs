@@ -12,7 +12,6 @@ namespace Services.ActionConnectionService
 {
     public class ConnectionService(IJsonFileAdapter actionConnectionAdapter) : IActionConnectionService
     {
-
         private readonly IJsonFileAdapter _actionConnectionAdapter = actionConnectionAdapter;
 
         public List<RelationshipConnection> GetActionConnections()
@@ -21,6 +20,11 @@ namespace Services.ActionConnectionService
             List<RelationshipConnection>? connectionList = JsonConvert.DeserializeObject<List<RelationshipConnection>>(jsonData);
 
             return connectionList ?? throw new InvalidActionConnectionData();
+        }
+
+        public void SaveActionConnections(List<RelationshipConnection> connections)
+        {
+            _actionConnectionAdapter.SaveNewJsonData("connections", connections);
         }
     }
 }

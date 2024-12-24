@@ -22,7 +22,7 @@ namespace Services.GameStateService
 
         public void SaveCurrentGameState(GameState gameState)
         {
-            _gameStateAdapter.SaveNewJsonData("data", JsonConvert.SerializeObject(gameState, Formatting.Indented));
+            _gameStateAdapter.SaveNewJsonData("data", gameState);
         }
     }
 }

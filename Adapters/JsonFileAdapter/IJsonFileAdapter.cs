@@ -11,7 +11,7 @@ namespace Adapters.JsonFileAdapter
     {
         public string FetchJsonData(string fileName);
 
-        public void SaveNewJsonData(string fileName, string data);
+        public void SaveNewJsonData(string fileName, object data);
 
         public string CreateFilePath(string fileName);
     }

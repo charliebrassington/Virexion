@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Adapters.JsonFileAdapter
 {
@@ -19,9 +21,12 @@ namespace Adapters.JsonFileAdapter
             return File.ReadAllText(CreateFilePath(fileName));
         }
 
-        public void SaveNewJsonData(string fileName, string data)
+        public void SaveNewJsonData(string fileName, object data)
         {
-            File.WriteAllText(CreateFilePath(fileName), data);
+            File.WriteAllText(
+                path: CreateFilePath(fileName), 
+                contents: JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.Indented)
+            );
         }
     }
 }
