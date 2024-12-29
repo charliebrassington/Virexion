@@ -1,4 +1,5 @@
 {
+  "GameAge": 1,
   "Government": {
     "TaxBracket": {
       "30000": 0.3,
@@ -13,7 +14,8 @@
       "2"
     ],
     "TeacherJob": "1",
-    "Budget": 36000.0
+    "Budget": 36000.0,
+    "StudentIdList": []
   },
   "People": {
     "1": {
@@ -24,7 +26,10 @@
       ],
       "JobList": [
         "1"
-      ]
+      ],
+      "Happiness": 0.0,
+      "CurrentHouse": "2",
+      "OwnedHouseList": []
     },
     "2": {
       "Name": "bob",
@@ -33,6 +38,12 @@
         "3"
       ],
       "JobList": [
+        "2"
+      ],
+      "Happiness": 0.0,
+      "CurrentHouse": "1",
+      "OwnedHouseList": [
+        "1",
         "2"
       ]
     }
@@ -43,14 +54,18 @@
       "Workload": 0.1,
       "SkillsRequired": [
         "1"
-      ]
+      ],
+      "VacancyCount": 0,
+      "WorkQuality": 0.0
     },
     "2": {
       "Salary": 100000.0,
       "Workload": 0.1,
       "SkillsRequired": [
         "3"
-      ]
+      ],
+      "VacancyCount": 0,
+      "WorkQuality": 0.0
     }
   },
   "Skills": {
@@ -62,6 +77,18 @@
     },
     "3": {
       "SkillName": "Programming"
+    }
+  },
+  "Houses": {
+    "1": {
+      "NumberOfBedrooms": 1,
+      "NumberOfToilets": 1,
+      "MonthlyRent": null
+    },
+    "2": {
+      "NumberOfBedrooms": 1,
+      "NumberOfToilets": 1,
+      "MonthlyRent": 500.0
     }
   }
 }

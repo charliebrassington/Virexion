@@ -18,6 +18,7 @@ using Services.ManagerService.WeightConnectionManagerService;
 using Services.ManagerService.WeightValidationManagerService;
 using Services.ViewHandler.ActionViewer;
 using Services.ViewHandler.ConnectionViewer;
+using Services.ViewHandler.GameStateViewer;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ICommandHandler<CompleteActionCmd>, ActionServiceHandler>();
 builder.Services.AddScoped<ICommandHandler<ChangeConnectionWeight>, ChangeConnectionWeightHandler>();
+builder.Services.AddScoped<ICommandHandler<SimulateGameDay>, SimulateGameDayHandler>();
 
 builder.Services.AddSingleton<IExternalAction, ChangeTaxBracketAction>();
 builder.Services.AddSingleton<IGameStateService, StateService>();
@@ -38,6 +40,7 @@ builder.Services.AddSingleton<IActionConnectionService, ConnectionService>();
 
 builder.Services.AddSingleton<IExternalActionViewer, ExternalActionViewer>();
 builder.Services.AddSingleton<IConnectionViewer, ConnectionWeightViewer>();
+builder.Services.AddSingleton<IGameStateViewer, StateViewer>();
 
 builder.Services.AddSingleton<ITaxCategoryService, TaxService>();
 builder.Services.AddSingleton<IPeopleCategoryService, PeopleService>();

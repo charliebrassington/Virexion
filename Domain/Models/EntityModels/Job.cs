@@ -12,5 +12,7 @@ namespace Domain.Models.EntityModels
         public required float Salary { get; set; }
         public required float Workload { get; set; }
         public required List<string> SkillsRequired { get; set; }
+        public required int VacancyCount { get; set; }
+        public required float WorkQuality { get; set; }
     }
 }

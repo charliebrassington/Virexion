@@ -12,5 +12,6 @@ namespace Domain.Models.EntityModels
         public required List<string> SkillsTaught { get; set; }
         public required string TeacherJob { get; set; }
         public required float Budget { get; set; }
+        public required List<string> StudentIdList { get; set; }
     }
 }
