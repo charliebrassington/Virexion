@@ -1,0 +1,94 @@
+{
+  "GameAge": 1,
+  "Government": {
+    "TaxBracket": {
+      "30000": 0.3,
+      "20000": 0.3,
+      "0": 0.0
+    },
+    "OverallBudget": 36000.0
+  },
+  "Education": {
+    "SkillsTaught": [
+      "1",
+      "2"
+    ],
+    "TeacherJob": "1",
+    "Budget": 36000.0,
+    "StudentIdList": []
+  },
+  "People": {
+    "1": {
+      "Name": "jim",
+      "Age": 30,
+      "SkillsList": [
+        "1"
+      ],
+      "JobList": [
+        "1"
+      ],
+      "Happiness": 0.0,
+      "CurrentHouse": "2",
+      "OwnedHouseList": []
+    },
+    "2": {
+      "Name": "bob",
+      "Age": 45,
+      "SkillsList": [
+        "3"
+      ],
+      "JobList": [
+        "2"
+      ],
+      "Happiness": 0.0,
+      "CurrentHouse": "1",
+      "OwnedHouseList": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "Jobs": {
+    "1": {
+      "Salary": 20000.0,
+      "Workload": 0.1,
+      "SkillsRequired": [
+        "1"
+      ],
+      "VacancyCount": 0,
+      "WorkQuality": 0.0
+    },
+    "2": {
+      "Salary": 100000.0,
+      "Workload": 0.1,
+      "SkillsRequired": [
+        "3"
+      ],
+      "VacancyCount": 0,
+      "WorkQuality": 0.0
+    }
+  },
+  "Skills": {
+    "1": {
+      "SkillName": "Teaching"
+    },
+    "2": {
+      "SkillName": "English"
+    },
+    "3": {
+      "SkillName": "Programming"
+    }
+  },
+  "Houses": {
+    "1": {
+      "NumberOfBedrooms": 1,
+      "NumberOfToilets": 1,
+      "MonthlyRent": null
+    },
+    "2": {
+      "NumberOfBedrooms": 1,
+      "NumberOfToilets": 1,
+      "MonthlyRent": 500.0
+    }
+  }
+}

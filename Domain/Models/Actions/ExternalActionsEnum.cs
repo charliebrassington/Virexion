@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Commands
+namespace Domain.Models.Actions
 {
-    public class HelloWorldCmd : BaseCommand
+    public enum ExternalActionsEnum
     {
+        ChangeTaxBracket = 0,
     }
 }

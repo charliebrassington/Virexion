@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.HelloWorld
+namespace Domain.Models
 {
-    public interface IHelloWorldService
+    public interface IEntityModel
     {
-        public void Hello();
     }
 }
